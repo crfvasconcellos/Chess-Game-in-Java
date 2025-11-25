@@ -25,7 +25,7 @@ public class UI {
 
         }
         else{
-            System.out.println(piece);
+            System.out.printf(piece.toString());
         }
         System.out.printf(" ");
     }
