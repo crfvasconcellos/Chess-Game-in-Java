@@ -1,131 +1,112 @@
-# ♟️ Chess-Game – Jogo de Xadrez em Java
+# ♟️ Chess-Game – Sistema de Xadrez em Java
 
-Projeto desenvolvido por **[Cláudio Vasconcellos](https://github.com/crfvasconcellos)** e **[Otávio Augusto](https://github.com/otavio-asr)** como **trabalho final da disciplina de Programação Orientada a Objetos (POO)** ministrada pelo **Professor David Nadler Prata** na **Universidade Federal do Tocantins (UFT)**.
+Projeto desenvolvido por **[Cláudio Vasconcellos](https://github.com/crfvasconcellos)** e **[Otávio Augusto](https://github.com/otavio-asr)**  
+Durante a disciplina de **Programação Orientada a Objetos (POO)** no curso de **Ciência da Computação** da **UFT**.
 
-O projeto tem como objetivo aplicar, na prática, os princípios da POO utilizando Java, incluindo herança, polimorfismo, encapsulamento, tratamento de erros e regras completas do jogo de xadrez.
-
----
-
-## 📌 Descrição
-
-**Chess-Game** é um jogo de xadrez completo executado no console, permitindo que dois jogadores disputem uma partida com todas as regras oficiais da modalidade.  
-O sistema inclui:
-
-- Representação completa do tabuleiro  
-- Todas as peças do xadrez com seus movimentos reais  
-- Sistema de turno entre jogadores  
-- Verificação de xeque e xeque-mate  
-- Peças capturadas exibidas separadamente  
-- Tratamento de exceções e entradas inválidas  
-- Jogadas especiais:
-  - **Roque**
-  - **En Passant**
-  - **Promoção de Peão**
+O objetivo do projeto é implementar um **sistema de xadrez completo em Java**, com **regras reais do jogo**, **tratamento de exceções**, **movimentação das peças**, **verificação de xeque/xeque-mate** e **modo textual** para interação via console.
 
 ---
 
-## 🧱 Tecnologias Utilizadas
-
-- Java 17+  
-- Programação Orientada a Objetos (POO)  
-- ANSI Colors no console  
-- Arquitetura em camadas (boardgame / chess / application)
-
----
-
-## 🚀 Como rodar o projeto
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-repositorio-aqui.git
-   ```
-
-2. **Abra o projeto no IntelliJ, Eclipse ou VS Code com extensão Java.**
-
-3. **Execute a classe principal:**
-   ```
-   application/Program.java
-   ```
-
-4. O jogo será exibido diretamente no console.
+## 🚀 Tecnologias Utilizadas
+- **Java** 
+- **Paradigma de Programação Orientada a Objetos**
+- **Tratamento de Exceções**
+- **Estruturas de Dados (Matrizes e Classes)**
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🎯 Funcionalidades Principais
+✔️ Movimentação de todas as peças do xadrez  
+✔️ Indicação visual do tabuleiro no console  
+✔️ Validação de movimentos ilegais  
+✔️ Verificação de **Xeque**  
+✔️ Verificação de **Xeque-mate**  
+✔️ Controle de turnos (brancas x pretas)  
+✔️ Captura de peças adversárias  
+✔️ Sistema de **posições possíveis** (highlight de movimentos)  
 
-```bash
-Chess-Game/
-│
-├── src/
-│   ├── application/        # Interface com o usuário (UI/console)
-│   │   └── Program.java
-│   │
-│   ├── boardgame/          # Lógica genérica de tabuleiro e peças
-│   │   ├── Board.java
-│   │   ├── Piece.java
-│   │   ├── Position.java
-│   │   └── BoardException.java
-│   │
-│   └── chess/              # Regras específicas do xadrez
-│       ├── ChessMatch.java
-│       ├── ChessPiece.java
-│       ├── ChessPosition.java
+---
+
+## 📌 Organização do Projeto
+
+```
+📦 Chess-Game
+├── 📁 board
+│   ├── Board.java
+│   ├── Position.java
+│   ├── Piece.java
+├── 📁 chess
+│   ├── ChessMatch.java
+│   ├── ChessPiece.java
+│   ├── ChessException.java
+│   ├── pieces/
 │       ├── King.java
-│       ├── Queen.java
+│       ├── Pawn.java
 │       ├── Rook.java
 │       ├── Bishop.java
 │       ├── Knight.java
-│       └── Pawn.java
-│
-└── README.md
+│       ├── Queen.java
+└── 📄 Program.java
 ```
 
 ---
 
-## 🏆 Funcionalidades em destaque
+## 🎮 Como Executar
 
-- **Movimentação real das peças**  
-- **Possíveis movimentos destacados no console**  
-- **Sistema de turnos**  
-- **Xeque e Xeque-mate**  
-- **Peças capturadas listadas separadamente**  
-- **Jogadas especiais:**
-  - Roque pequeno e grande  
-  - En Passant  
-  - Promoção de Peão  
+### 📍 Pré-requisitos
+- Ter o **Java instalado** na máquina.
+
+### ▶️ Rodar o projeto
+No terminal, navegue até a pasta do projeto e execute:
+
+```bash
+javac Program.java
+java Program
+```
+
+O sistema exibirá o tabuleiro e solicitará as jogadas via entrada de texto.
 
 ---
 
-## 🧪 Exemplo de Execução
+## 📷 Exemplo de Saída (Tabuleiro no Console)
 
 ```
-8  r - - - k - - r
-7  p p p p - p p p
+8  ♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜
+7  ♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟
 6  - - - - - - - -
 5  - - - - - - - -
 4  - - - - - - - -
 3  - - - - - - - -
-2  P P P P P P P P
-1  R N B Q K B N R
-   a b c d e f g h
-
-Turn: White
-Source: e2
-Target: e4
+2  ♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙
+1  ♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖
+   a  b  c  d  e  f  g  h
 ```
 
 ---
 
-## ⚠️ Observações
+## 🧩 Regras Implementadas
 
-- Desenvolvido para fins didáticos  
-- Interface apenas via console  
-- Não possui IA — apenas dois jogadores humanos
+🔹 Peões podem se mover duas casas no primeiro movimento  
+🔹 Movimentos especiais como roque *(opcional colocar se está implementado)*  
+🔹 Bloqueio de jogadas que deixam o rei em xeque  
+🔹 Captura de peças com validação  
+🔹 Verificação automática de **Xeque-Mate**
 
 ---
 
-## 👨‍💻 Autores
+## 👨‍💻 Desenvolvedores
 
-- **[Cláudio Vasconcellos](https://github.com/crfvasconcellos)**
-- **[Otávio Augusto](https://github.com/otavio-asr)**
+| Nome | GitHub |
+|------|--------|
+| **Cláudio Vasconcellos** | https://github.com/crfvasconcellos |
+| **Otávio Augusto** | https://github.com/otavio-asr |
 
+---
+
+## 📝 Licença
+Este projeto foi desenvolvido para fins **educacionais**, sem fins comerciais.  
+Sinta-se à vontade para estudar, modificar e evoluir o sistema! 😉
+
+---
+
+### ⭐ Dê um star no repositório se gostou!
