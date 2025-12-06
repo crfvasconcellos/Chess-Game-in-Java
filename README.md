@@ -1,4 +1,4 @@
-# ♟️ Chess-Game – Sistema de Xadrez em Java
+# ♟️ chess-Game – Sistema de Xadrez em Java
 
 Projeto desenvolvido por **[Cláudio Vasconcellos](https://github.com/crfvasconcellos)** e **[Otávio Augusto](https://github.com/otavio-asr)**  
 Durante a disciplina de **Programação Orientada a Objetos (POO)** no curso de **Ciência da Computação** da **UFT**.
@@ -30,7 +30,7 @@ O objetivo do projeto é implementar um **sistema de xadrez completo em Java**, 
 ## 📌 Organização do Projeto
 
 ```
-📦 Chess-Game
+📦 chess-Game
 ├── 📁 board
 │   ├── Board.java
 │   ├── Position.java
